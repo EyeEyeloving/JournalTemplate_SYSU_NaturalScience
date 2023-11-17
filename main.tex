@@ -1,0 +1,163 @@
+\documentclass{article}
+
+%%%%%% 导入usepackage %%%%%%
+\usepackage[UTF8]{ctex}% 设置中文宏
+\usepackage{fontspec}
+\setmainfont{Times New Roman}% 设置英文字体
+\usepackage{graphicx}% 用于插入插图
+\usepackage{float}% 插入图片2！！
+\usepackage{caption}
+\captionsetup{font=small}
+\usepackage{subfigure}
+\usepackage{hyperref}% 设置文献跳转单向链接（但是他有默认属性）
+\hypersetup{
+colorlinks=true,%将超链接以颜色来标识，而并非使用默认的方框来标识。
+linkcolor=black,
+citecolor=black
+}
+\usepackage{gbt7714}% 设置国标7714文献引用格式
+\usepackage{amsmath}% 美国数学公式宏包
+
+%%%%%% 设置字号 %%%%%%
+\newcommand{\chuhao}{\fontsize{42pt}{\baselineskip}\selectfont}
+\newcommand{\xiaochuhao}{\fontsize{36pt}{\baselineskip}\selectfont}
+\newcommand{\yihao}{\fontsize{28pt}{\baselineskip}\selectfont}
+\newcommand{\erhao}{\fontsize{21pt}{\baselineskip}\selectfont}
+\newcommand{\xiaoerhao}{\fontsize{18pt}{\baselineskip}\selectfont}
+\newcommand{\sanhao}{\fontsize{15.75pt}{\baselineskip}\selectfont}
+\newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}
+\newcommand{\xiaosihao}{\fontsize{12pt}{\baselineskip}\selectfont}
+\newcommand{\wuhao}{\fontsize{10.5pt}{\baselineskip}\selectfont}
+\newcommand{\xiaowuhao}{\fontsize{9pt}{\baselineskip}\selectfont}
+
+%\usepackage{array}
+
+%%%%%% 设置页面布局 %%%%%%
+\usepackage{geometry}
+\geometry{
+ a4paper,% 21cm 29.7cm
+ % total={170mm,237mm},% 默认情况下定义了文档正文的大小
+ % 正文页边距
+ top=30mm,bottom=30mm,left=20mm,right=20mm
+}
+
+%%%%%% 设置页眉页脚 %%%%%%
+\usepackage{fancyhdr}
+
+\fancypagestyle{Shouye}{% plain 没有页眉，页脚是居中的页码；
+\fancyhead{}
+\fancyfoot{}
+% 页眉页脚边距
+\setlength{\voffset}{2mm}
+\setlength{\headsep}{10mm}% 保持voffset+headsep=12mm就能保证DOI的高度，然后降低页眉高度
+\setlength{\footskip}{21mm}
+\fancyhead[L]{\xiaowuhao 第\quad 卷 \ 第\quad 期 \\ \xiaowuhao \qquad 年\qquad 月}
+\fancyhead[C]{\xiaowuhao 中山大学学报（自然科学版）\\\xiaowuhao ACTA SCIENTIARUM NATURALIUM UNIVERSITIS SUNYATSENI }
+\fancyhead[R]{\xiaowuhao  Vol. \qquad No.\\Month\qquad Year}
+\renewcommand{\headrulewidth}{.75pt} % 页眉线宽，设为0能够去页眉线
+\renewcommand{\footrulewidth}{0pt} % 页眉线宽，设为0能够去页眉线
+}
+
+%%%%%% 设置行间距和段落间距 %%%%%%
+\renewcommand {\baselinestretch} {1.1}% 行间距 1.0=单倍行距，1.25=1.5倍行距
+% \setlength{\parskip}{20pt}
+
+%%%%%% 正文 %%%%%%
+\begin{document}
+
+%%%%%% 设置首页页眉页脚格式 %%%%%%
+\pagestyle{Shouye}
+
+%%%%%% 右对齐设置DOI %%%%%%
+\rightline{DOI:10.13471/j.cnki.acta.snus.}
+
+\vspace{10.5pt}% 五号字体
+\vspace{10.5pt}
+
+%%%%%% 设置中文标题 %%%%%%
+\centerline{\bfseries \songti \erhao 如有侵权请联系我删除}
+
+\vspace{10.5pt}
+
+%%%%%% 设置中文作者和作者单位 %%%%%%
+\centerline{\xiaosihao 姓名}
+\vspace{10.5pt}
+\leftline{\wuhao 1.作者单位}
+\vspace{10.5pt}
+
+%%%%%% 设置中文摘要和关键词 %%%%%%
+\wuhao{\noindent
+\textbf{摘\quad 要}：摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要。\\
+\textbf{关键词}：关键词，关键词，关键词\\
+\textbf{中图分类号：} xxxxx \qquad \qquad
+\qquad \textbf{文献标志码：} X \qquad
+\qquad \qquad \textbf{文章编号：}xxxx-xxxx
+}
+
+\vspace{15pt}% 小三号字体
+
+%%%%%% 设置英文标题 %%%%%%
+\centerline{\bfseries \sanhao Title}
+
+\vspace{10.5pt}
+
+%%%%%% 设置英文作者单位 %%%%%%
+\centerline{\wuhao \textit{Name}}
+\vspace{10.5pt}
+\leftline{\wuhao \textit{1.Address}}
+\vspace{10.5pt}
+
+%%%%%% 设置英文摘要和关键词 %%%%%%
+\wuhao{\noindent
+\textbf{Abstract：} 
+Abstract abstract abstract abstract abstract abstract abstract abstract abstract .abstract abstract abstract abstract. Abstract abstract abstract abstract abstract abstract abstract Abstrac.abstract abstract abstract abstract abstract abstract. Abstract abstract abstract abstract abstract abstract abstract abstract abstract.}
+
+\noindent
+\textbf{Key words：}Key word, Key word, Key word
+
+\vspace{2cm}
+%%%%%% 设置首页文章信息 %%%%%%
+\noindent\rule{40mm}{0.75pt}
+
+\vspace{5pt}
+
+\noindent % 换行不加缩进
+\renewcommand\arraystretch{1} % 设置表格行高
+\begin{tabular}{lll}
+\rule{0pt}{10pt}\xiaowuhao \textbf{收稿日期：}xxxx-xx-xx & 
+\multicolumn{1}{c}{\xiaowuhao \qquad \qquad \textbf{录用日期：}xxxx-xx-xx} & 
+\multicolumn{1}{r}{\xiaowuhao \textbf{网络首发日期：}xxxx-xx-xx} \\
+\multicolumn{3}{l}{\xiaowuhao \textbf{基金项目：}课程期末作业题目} \\
+\multicolumn{3}{l}{\xiaowuhao \textbf{作者简介：}姓名（19xx年生），性别：x，学号：xxxxxxxx；研究方向：xxxx}\\
+\multicolumn{3}{l}{\xiaowuhao \qquad \qquad \quad Email：xxx@xxx}   \\
+\multicolumn{3}{l}{\xiaowuhao \textbf{通讯作者：}姓名（19xx年生），性别：x，学号：xxxxxxxx；研究方向：xxxx} \\
+\multicolumn{3}{l}{\xiaowuhao \qquad \qquad \quad Email：xxx@xxx}                        
+\end{tabular}
+
+%%%%%% 下一页 %%%%%%
+\clearpage
+
+\section{\bfseries \kaishu \sihao 一级标题一}
+内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容\cite{文献引用案例将2021侵权删}。
+
+\section{\bfseries \kaishu \sihao 一级标题二}
+内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容。
+
+\subsection{\bfseries \songti \xiaosihao 二级标题一}
+内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容。
+
+\subsection{\bfseries \songti \xiaosihao 二级标题二}
+内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容。
+
+\section{\bfseries \kaishu \sihao 一级标题三}
+内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容。
+
+
+\small
+\xiaowuhao
+% gbt7714-author-year
+\bibliographystyle{gbt7714-numerical}
+\bibliography{references.bib}
+
+
+\end{document}
